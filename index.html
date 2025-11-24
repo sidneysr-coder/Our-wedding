@@ -113,19 +113,21 @@
                         <div class="text-sm text-gray-600">Seconds</div>
                     </div>
                 </div>
-		//countdownDuration should match how long until the wedding in seconds
-		const countdownDuration = totalSeconds; // you already calculated this
-
+		<script>
+		const countdownDuration = totalSeconds;
 		document.documentElement.style.setProperty(
-		"--countdown-duration",
-		countdownDuring + "s"
+  		  "--countdown-duration",
+  		  countdownDuration + "s"
 		);
-                
+
+		</script>
+
                 <!-- El Camino Animation -->
                 <div class="relative h-20 overflow-hidden bg-gradient-to-r from-amber-200 to-orange-200 rounded-lg">
                     <div class="absolute bottom-2 h-1 w-full bg-gray-400"></div>
-                    <div class="car-animation absolute bottom-3 car-facing-right">
-		
+                   <div class="car-animation absolute bottom-3">
+  			  <svg class="w-24 h-20 car-facing-right" viewBox="0 0 120 70" fill="none">
+
                         </svg class="w-24 h-20" viewBox="0 0 120 70" fill="none">
                             <!-- White El Camino - Side Profile -->
                             <!-- Truck bed -->
