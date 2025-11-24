@@ -34,6 +34,7 @@
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -43,6 +44,9 @@
             top: 0;
             z-index: 50;
         }
+	.car-facing-right svg {
+			transform: scaleX(-1);
+	}
     </style>
 </head>
 <body class="bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
@@ -121,9 +125,7 @@
                 <div class="relative h-20 overflow-hidden bg-gradient-to-r from-amber-200 to-orange-200 rounded-lg">
                     <div class="absolute bottom-2 h-1 w-full bg-gray-400"></div>
                     <div class="car-animation absolute bottom-3 car-facing-right">
-			.car-facing-right svg {
-			transform: scaleX(-1);
-			}
+		
                         </svg class="w-24 h-20" viewBox="0 0 120 70" fill="none">
                             <!-- White El Camino - Side Profile -->
                             <!-- Truck bed -->
@@ -206,15 +208,12 @@ Tristan asked for my number, and I gave it to him thinking I would never see him
 
             <!-- Photo Gallery -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="images/gallery-1.jpg" alt="Gallery photo 1" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
+                <img src="images/gallery-1.jpg" alt="Gallery photo 1" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 				transition">
                 <img src="images/gallery-2.jpg" alt="Gallery photo 2" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-3.jpg" alt="Gallery photo 3" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-4.jpg" alt="Gallery photo 4" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
-shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-5.jpg" alt="Gallery photo 5" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
-shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-6.jpg" alt="Gallery photo 6" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
-shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-7.jpg" alt="Gallery photo 7" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
             </div>
         </div>
@@ -254,7 +253,7 @@ shadow-lg hover:scale-105 transition">
             <div class="bg-white/90 backdrop-blur p-8 rounded-lg shadow-xl mb-8">
                 <h3 class="text-3xl font-serif mb-4 text-amber-600">Dress Code</h3>
                 <p class="text-gray-700 text-lg leading-relaxed">
-                    <strong>Formal attire.</strong> Outshine the bride, but avoid white, the bride has reserved this color for herself! 
+                    <strong>Formal attire.</strong> Outshine the bride! (But avoid white, the bride has reserved this color for herself!) 
                 </p>
             </div>
 
