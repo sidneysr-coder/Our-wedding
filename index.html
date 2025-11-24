@@ -29,7 +29,7 @@
             100% { transform: translateX(calc(100vw + 100px)); }
         }
         .car-animation {
-            animation: drive 15s linear infinite;
+            animation: drive var (--countdown-duration) linear infinite;
         }
         .fade-in {
             animation: fadeIn 1s ease-in;
@@ -109,12 +109,22 @@
                         <div class="text-sm text-gray-600">Seconds</div>
                     </div>
                 </div>
+		//countdownDuration should match how long until the wedding in seconds
+		const countdownDuration = totalSeconds; // you already calculated this
+
+		document.documentElement.style.setProperty(
+		"--countdown-duration",
+		countdownDuring + "s"
+		);
                 
                 <!-- El Camino Animation -->
                 <div class="relative h-20 overflow-hidden bg-gradient-to-r from-amber-200 to-orange-200 rounded-lg">
                     <div class="absolute bottom-2 h-1 w-full bg-gray-400"></div>
-                    <div class="car-animation absolute bottom-3">
-                        <svg class="w-24 h-20" viewBox="0 0 120 70" fill="none">
+                    <div class="car-animation absolute bottom-3 car-facing-right">
+			.car-facing-right svg {
+			transform: scaleX(-1);
+			}
+                        </svg class="w-24 h-20" viewBox="0 0 120 70" fill="none">
                             <!-- White El Camino - Side Profile -->
                             <!-- Truck bed -->
                             <rect x="65" y="38" width="30" height="12" fill="#F5F5F5" stroke="#333" stroke-width="1.5"/>
@@ -169,7 +179,7 @@
                         <!-- Add your story here -->
                         We met in 2023 at the Whiskey River West bar. Tristan was looking to dance, and I was out with a group of friends. The moment I saw Tristan, I knew I had to dance with him — so I made sure he noticed me and asked me to dance. We danced one song, then two more. Later in the night, he came back and asked me to dance again, and we ended up dancing until the place was about to close.
 
-Tristan asked for my number, and I gave it to him, thinking I would never see him again — I assumed he was just visiting for business. Little did I know that he actually lived in Katy, and that he felt the same connection I did. The next day (or so), he texted me and invited me on our first date... and from that moment on, we’ve been inseparable
+Tristan asked for my number, and I gave it to him thinking I would never see him again — I assumed he was just visiting for business. Little did I know that he actually lived in Katy, and that he felt the same connection I did. The next day (or so), he texted me and invited me on our first date... and from that moment on, we’ve been inseparable
                     </p>
                 </div>
                 
@@ -189,10 +199,7 @@ Tristan asked for my number, and I gave it to him, thinking I would never see hi
                     <h3 class="text-2xl font-serif text-amber-600 mb-4">The Proposal</h3>
                     <p class="text-gray-700 leading-relaxed">
                         <!-- Add your proposal story here -->
-                        It all started when we went to the moon - at least, that is what Tristan felt after hiking 1.5 miles up!- together in our first big solo trip while visiting different National Parks. That morning, the chef at the hotel they stayed at recommended that if they were going to visit Arches National Park, 
-                        they HAD to go to Delicate Arch. After 3 days going to hike to different National Parks, Sidney was just enjoying the experience of seeing SO MANY RED ROCKS, but Tristan had been planning all along for the big moment. Once they reached the arch, Sidney told Tristan to go under the arch to take some pictures of him,
-                        and then ask someone to take pictures of them. As they finished posing for the pictures, Sidney turned around to get her phone, but Tristan stopped her, saying, "Are you ready for our next adventure?" She thought he was making a dark joke and that he meant jumping off the cliff edge, and pretended to jump.
-                        said some sweet words that neither of them can remember, and Sidney started shaking uncontrollably, because Tristan was looking handsome, like really handsome, cover of a magazine handsome. Once she stopped drooling over how handsome he looked, she finally answered the one question he asked, "Would you marry me?" with a "YES!!!" 
+                        It all started when we went to the moon - at least, that is what Tristan felt after hiking 1.5 miles up!- together in our first big solo trip while visiting different National Parks. That morning the chef at the hotel they stayed at recommended that if they were going to visit Arches National Park they HAD to go to Delicate Arch. After 3 days going to hike to different National Parks, Sidney was just enjoying the experience of seeing SO MANY RED ROCKS, but Tristan had been planning all along the big moment. Once they reached the arch, Sidney told Tristan to go under the arch to take some pictures of him, and then ask someone to take pictures of them. As they finished posing for the pictures, Sidney turned around to go get her phone, but Tristan stop her saying "Are you ready for our next adventure?" She thought he was making a dark joke and that he meant jumping off the cliff edge, and pretended to jump, Tristan didn't laugh, she attempted to go get her phone one more time, but Tristan stop her asking her "where are you going?" She turned around, just to see him showing her a ring box. Tristan knelt down, said some sweet words that neither of them can remember and Sidney started shaking. Because Tristan was looking handsome, like really handsome, cover of a magazine handsome. Once she stopped drooling over how handsome he looked, she finally answer the one question he asked "Would you marry me?" with a "YES!!!"
                     </p>
                 </div>
             </div>
@@ -203,8 +210,11 @@ Tristan asked for my number, and I gave it to him, thinking I would never see hi
                 <img src="images/gallery-2.jpg" alt="Gallery photo 2" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-3.jpg" alt="Gallery photo 3" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-4.jpg" alt="Gallery photo 4" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
+shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-5.jpg" alt="Gallery photo 5" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
+shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-6.jpg" alt="Gallery photo 6" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
+shadow-lg hover:scale-105 transition">
                 <img src="images/gallery-7.jpg" alt="Gallery photo 7" class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 transition">
             </div>
         </div>
@@ -244,7 +254,7 @@ Tristan asked for my number, and I gave it to him, thinking I would never see hi
             <div class="bg-white/90 backdrop-blur p-8 rounded-lg shadow-xl mb-8">
                 <h3 class="text-3xl font-serif mb-4 text-amber-600">Dress Code</h3>
                 <p class="text-gray-700 text-lg leading-relaxed">
-                    <strong>Formal attire.</strong> Outshine the bride but avoid white! Think elegant fall colors - rich browns, golden tones, ivory, champagne, burnt orange, and dusty blue are perfect for our autumn celebration.
+                    <strong>Formal attire.</strong> Outshine the bride, but avoid white, the bride has reserved this color for herself! 
                 </p>
             </div>
 
@@ -448,5 +458,4 @@ Tristan asked for my number, and I gave it to him, thinking I would never see hi
         });
     </script>
 </body>
-
 </html>
